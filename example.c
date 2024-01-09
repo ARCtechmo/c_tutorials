@@ -1,52 +1,41 @@
 // practice code snippets
+// a simple counter from 1 - 10
 #include <stdio.h>
-void newFunc(){
-    int i = 4;
-    switch(i){
-        case 1:
-            printf("Case 1\n"); break;
-        case 2:
-            printf("Case 2\n"); break;
-        case 3:
-            printf("Case3\n"); break;
-        case 4:
-            printf("Case 4\n"); break;
-        default:
-            printf("Deffault\n"); break;
-    }
-}
-
-int intFunc(){
-    int i = 4;
-    switch(i){
-        case 1:
-            printf("Case 1\n"); break;
-        case 2:
-            printf("Case 2\n"); break;
-        case 3:
-            printf("Case3\n"); break;
-        case 4:
-            printf("Case 4\n"); break;
-        default:
-            printf("Default\n"); break;
-    }
+int countSwitch(){
+    for(int i=1; i<=10; i++){
+        switch(i){
+            case 1: 
+                printf("Start\n");
+                break;
+            default:
+                printf("Default\n");
+        };
+        printf("%d\n", i);
+        switch(i){
+            case 10:
+            printf("Done!\n");
+            break;
+        }
+    };
     return 0;
 }
 
-int counter(){
-    for(int i = 1; i<=10; i++){
-        if (i==2){
-            continue;
-        }
-        if(i==6){
-            break;
-        }
-        printf("%d\n", i);
-    }
-
+int chFunc(){
+    char c = 'a';
+    printf("%c\n", c);
+    return 0;
 }
+
+int exFunc(){
+    const int a = 11;
+    int ans = a + 2;
+    printf("%d\n", ans);
+    return 0;
+}
+
 int main(){
-    intFunc();
-    counter();
+    countSwitch();
+    chFunc();
+    exFunc();
     return 0;
 }
